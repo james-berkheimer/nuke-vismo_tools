@@ -1,0 +1,51 @@
+set cut_paste_input [stack 0]
+version 8.0 v6
+push $cut_paste_input
+push $cut_paste_input
+Copy {
+ inputs 2
+ from0 rgba.red
+ to0 rgba.alpha
+ name Copy1
+ selected true
+ xpos 460
+ ypos 160
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 500
+ name Constant1
+ selected true
+ xpos 347
+ ypos 151
+}
+Dot {
+ name Dot1
+ selected true
+ xpos 381
+ ypos 319
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ selected true
+ xpos 460
+ ypos 316
+}
+Dot {
+ name Dot2
+ selected true
+ xpos 494
+ ypos 344
+}
+push 0
+Copy {
+ inputs 2
+ from0 rgba.red
+ to0 depth.Z
+ name Copy2
+ selected true
+ xpos 642
+ ypos 335
+}

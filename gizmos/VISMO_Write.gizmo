@@ -1,0 +1,53 @@
+#! C:/Program Files/Nuke8.0v5/nuke-8.0.v5.dll -nx
+# version 8.0 v5
+Gizmo {
+ tile_color 0xfff900ff
+ addUserKnob {20 User}
+ addUserKnob {41 channels T Write1.channels}
+ addUserKnob {41 file T Write1.file}
+ addUserKnob {41 proxy T Write1.proxy}
+ addUserKnob {41 frame_mode l frame T Write1.frame_mode}
+ addUserKnob {41 frame l "" -STARTLINE T Write1.frame}
+ addUserKnob {41 colorspace T Write1.colorspace}
+ addUserKnob {41 premultiplied T Write1.premultiplied}
+ addUserKnob {41 raw l "raw data" T Write1.raw}
+ addUserKnob {41 views T Write1.views}
+ addUserKnob {41 file_type l "file type" T Write1.file_type}
+ addUserKnob {26 ""}
+ addUserKnob {41 render_order l "render order" T Write1.render_order}
+ addUserKnob {26 "" l " "}
+ addUserKnob {41 Render l "Local Render" T Write1.Render}
+ addUserKnob {26 "" l " "}
+ addUserKnob {22 Submit_to_Deadline l "Submit to Deadline" t "Submits Nuke job to Deadline" T DeadlineNukeClient.main() +STARTLINE}
+ addUserKnob {26 "" l " "}
+ addUserKnob {41 first l "frame range" T Write1.first}
+ addUserKnob {41 last l "" -STARTLINE T Write1.last}
+ addUserKnob {41 use_limit l "limit to range" T Write1.use_limit}
+ addUserKnob {41 reading l "read file" T Write1.reading}
+ addUserKnob {41 checkHashOnRead l "check file matches input" T Write1.checkHashOnRead}
+ addUserKnob {41 on_error l "missing frames" T Write1.on_error}
+ addUserKnob {41 reload l Reload T Write1.reload}
+ addUserKnob {20 "" l Python}
+ addUserKnob {41 beforeRender l "before render" T Write1.beforeRender}
+ addUserKnob {41 beforeFrameRender l "before each frame" T Write1.beforeFrameRender}
+ addUserKnob {41 afterFrameRender l "after each frame" T Write1.afterFrameRender}
+ addUserKnob {41 afterRender l "after render" T Write1.afterRender}
+ addUserKnob {41 renderProgress l "render progress" T Write1.renderProgress}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -5
+  ypos -119
+ }
+ Write {
+  name Write1
+  xpos -5
+  ypos -79
+ }
+ Output {
+  name Output1
+  xpos -5
+  ypos 21
+ }
+end_group

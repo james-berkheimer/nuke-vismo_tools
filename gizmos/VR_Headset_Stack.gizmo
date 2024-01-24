@@ -1,0 +1,61 @@
+#! C:/Program Files/Nuke9.0v7/nuke-9.0.7.dll -nx
+version 9.0 v7
+Gizmo {
+ inputs 2
+ tile_color 0xff21e8ff
+ gl_color 0xff21e8ff
+ postage_stamp true
+}
+ Input {
+  inputs 0
+  name Right_Eye
+  xpos 457
+  ypos 529
+ }
+ Transform {
+  scale {1 0.5}
+  center {960 540}
+  name Transform2
+  xpos 457
+  ypos 633
+ }
+ Transform {
+  translate {0 -270}
+  center {960 540}
+  name Transform4
+  xpos 457
+  ypos 659
+ }
+ Input {
+  inputs 0
+  name Left_Eye
+  xpos 367
+  ypos 529
+  number 1
+ }
+ Transform {
+  scale {1 0.5}
+  center {960 540}
+  name Transform1
+  xpos 367
+  ypos 630
+ }
+ Transform {
+  translate {0 810}
+  center {960 540}
+  name Transform3
+  xpos 367
+  ypos 656
+ }
+ Merge2 {
+  inputs 2
+  name Merge7
+  xpos 407
+  ypos 719
+ }
+ Output {
+  name Output1
+  xpos 407
+  ypos 807
+ }
+end_group
